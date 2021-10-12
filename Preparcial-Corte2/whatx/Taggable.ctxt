@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Taggable
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Tag\ here.\r\n\ \r\n\ @author\ Ronaldo\ Henao\ -\ Cesar\ V\u00E1squez\r\n\ @version\ 1.0\r\n
+comment1.params=tags
+comment1.target=void\ tag(java.util.ArrayList)
+comment1.text=\r\n\ Associate\ elements\ to\ business\ tags\r\n\ @Param\ tags\ ArrayList\ of\ tags\r\n
+comment2.params=
+comment2.target=java.util.ArrayList\ getTags()
+comment3.params=tagsV
+comment3.target=boolean\ verificarTag(java.util.ArrayList)
+comment4.params=
+comment4.target=boolean\ validTag()
+comment5.params=tagName
+comment5.target=boolean\ tagIntags(java.lang.String)
+numComments=6
