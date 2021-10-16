@@ -8,6 +8,7 @@ import java.time.LocalDate;
  */
 public class Whatx {
     private ArrayList<Chat> chats;
+    private User owner;
     
     public void tag(ArrayList<Tag> tags){
         try{
@@ -22,26 +23,25 @@ public class Whatx {
     public ArrayList<User> findUsersByTagName(String tagName,LocalDate startDate, 
     LocalDate endDate) throws WhatxException{
         try{
-        ArrayList<User> usuarios = new ArrayList<User>();
-        if (startDate.compareTo(LocalDate.now()) > 0 && 
+            ArrayList<User> usuarios = new ArrayList<User>();
+            if (startDate.compareTo(LocalDate.now()) > 0 && 
             endDate.compareTo(LocalDate.now()) > 0) 
-            throw new WhatxException(WhatxException.FUTURE_DATES);
-        if (startDate.compareTo(endDate) < 0) throw new WhatxException(WhatxException.START_BEFORE_END);
-        for (Chat i: chats){
-            if (!i.tagIntags(tagName)) throw new WhatxException(WhatxException.NO_TAG);
-            else{
-                ArrayList<User> added = i.getmembers();
-                for (User j: added){
-                    usuarios.add(j);
+                throw new WhatxException(WhatxException.FUTURE_DATES);
+            if (startDate.compareTo(endDate) < 0) throw new WhatxException(WhatxException.START_BEFORE_END);
+            for (Chat i: chats){
+                if (!i.tagIntags(tagName)) throw new WhatxException(WhatxException.NO_TAG);
+                else{
+                    ArrayList<User> added = i.getmembers();
+                    for (User j: added){
+                        usuarios.add(j);
+                    }
                 }
             }
+            return usuarios;
         }
-        return usuarios;
-    }
-    catch (Exception WhatxException){
-        return null;
-    }
-   
+        catch (Exception WhatxException){
+            return null;    
+        }
     }
 }
 /**

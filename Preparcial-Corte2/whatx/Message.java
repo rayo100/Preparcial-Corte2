@@ -1,3 +1,4 @@
+
 /**
  * Write a description of class Tag here.
  * 
@@ -7,7 +8,7 @@
 public class Message {
     private int id;
     private String text;
-    private LocalDateTime date;
+    //private LocalDateTime date;
     private boolean read;
     private User sender;
     private File file;

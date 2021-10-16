@@ -14,7 +14,7 @@ public class WhatxException extends Exception
     public static final String NO_TAG = "G There is no tag with that name";
     public static final String FUTURE_DATES = "StartDate and endDate are future dates";
     public static final String START_BEFORE_END = "StartDate is before endDate";
-    public WhatxException(String Message){
-        
+    public WhatxException(String message){
+        super(message);
     }
 }
