@@ -45,6 +45,8 @@ public class Whatx {
     }
 }
 /**
+ * III. Extendiendo
+ * 
  * IV. (20%) Conceptos
  * 1. ¿Qué es una clase abstracta? ¿Cuál podría ser una diferencia con una interfaz?
  * La clase abstracta declara la existencia de métodos pero no 
